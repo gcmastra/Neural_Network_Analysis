@@ -8,15 +8,15 @@ What are the factors that contribute to determining the optimal accuracy rate wi
 - Number of features (columns)
 - Number of layers in the neural network
 - Number of nodes in each layer
-- Choice of the activation function
+- Choice of the activation function in each layer
 
 Determining which of these is more important takes multiple test runs isolating each variable one at a time.
 
-Another factor that can effect the outcome is the exact split of the training data vs the testing data.
+Another factor that can affect the outcome is the exact split of the training data vs the testing data.
 Selecting a different randomizer for the train_test_split function has an effect on the results even though it is small. 
 
 In order of importance, the factor that affects the accuracy rate the most is the number of nodes in the layers.
-Adding more layers does not necessarily increase performance, at least in my test runs.
+Adding more layers does not necessarily increase performance, at least according to the course material.
 
 These are the questions we attempted to answer: 
 
@@ -52,12 +52,12 @@ These are the questions we attempted to answer:
  
   ### Suggestions for Additional Optimizations
  
- The neural network might perform better if more of the non-numeric columns were dropped.  In addition to "NAME" and "EIN" which are arbitrary and should have no effect1. the number of bins- I would change the cut off point to fine tune how many classifications were grouped into the "Other" category. on performance, other subjective data like "Affiliation" or "Organization" could probably be removed from the model reducing the "noise" in the network.
+ The neural network might perform better if more of the non-numeric columns were dropped.  In addition to "NAME" and "EIN" which are arbitrary and should have no effect on performance, other subjective data like "Affiliation" or "Organization" could probably be removed from the model reducing the "noise" in the network.
  
  Two other intangible factors might be worth researching.  In the interest of time I was only able to include four(4) runs of the model with different numbers of nodes in the layers. If I had more time I would have also looked into these questions: 
  <ul>1. Change the number of bins- I would change the cut off point to fine tune how many classifications were grouped into the "Other" category.</ul>
  <ul>2. Changing the randomizer on the train_test_split() function.  Intuitively it shouldn't make a difference, but it does, because the randomizer is pseudo-random</ul>
- <ul>2. Changing the ratio of training to test data - instead of 75/25 which is the standard, I would try 80/20 to see how it affecte the accuracy.</ul>
+ <ul>2. Changing the ratio of training to test data - instead of 75/25 which is the standard, I would try 80/20 to see how it affects the accuracy.</ul>
   
  <hr>
 
